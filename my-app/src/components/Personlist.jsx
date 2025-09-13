@@ -21,12 +21,15 @@ export default function Personlist() {
         <div style={myStyle}>Helloo</div>
       <h1>People : {data.length} pcs</h1>
       <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
+      <br/>
+      <br/>
       <ul>
         {show &&
           data.map((element) => (
             <li key={element.id}>
               <img src={element.gender=="Male" ? boy : girl} width={50} height={50}/>
               <h2>{element.name}</h2>
+              <button>Delete</button>
             </li>
           ))}
       </ul>
