@@ -1,6 +1,7 @@
 import { useState } from "react";
 import boy from '../assets/boy.svg'
 import girl from '../assets/girl.svg'
+import "./Personlist.css"
 
 export default function Personlist() {
   const [data, setData] = useState([
@@ -13,26 +14,26 @@ export default function Personlist() {
   const [show, setShow] = useState(true);
   console.table(data);
 
-  const myStyle = {
-    color:"red"
-  }
   return (
-    <>
-        <div style={myStyle}>Helloo</div>
-      <h1>People : {data.length} pcs</h1>
-      <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
-      <br/>
-      <br/>
+    <div className="container">
+        <div className="header">
+            <h2>Our database have {data.length} peoples</h2>
+            <button onClick={() => setShow(!show)}>{show ? "Hide" : "Show"}</button>
+        </div>
       <ul>
         {show &&
           data.map((element) => (
             <li key={element.id}>
-              <img src={element.gender=="Male" ? boy : girl} width={50} height={50}/>
-              <h2>{element.name}</h2>
-              <button>Delete</button>
+                <div className="left">
+                    <img src={element.gender=="Male" ? boy : girl} width={50} height={50}/>
+                    <p>{element.name}</p>
+                </div>
+              <div className="control">
+                <button>Delete</button>
+              </div>
             </li>
           ))}
       </ul>
-    </>
+    </div>
   );
 }
