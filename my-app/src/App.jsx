@@ -26,8 +26,8 @@ function App() {
     <div className={'app'}>
       <Header title="Dreams" theme={theme} setTheme={setTheme}/>
       <main>
-        <Addform data={data} setData={setData}/>
-        <Personlist data={data} deleteUser={deleteUser}/>
+        <Addform data={data} setData={setData} theme={theme} setTheme={setTheme}  />
+        <Personlist data={data} deleteUser={deleteUser} setTheme={setTheme} theme={theme}/>
       </main>
     </div>
     </div>

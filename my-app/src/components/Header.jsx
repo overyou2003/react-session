@@ -6,7 +6,7 @@ function Header({title , theme , setTheme}) {
         else setTheme("light")
     }
     return(
-        <nav>
+        <nav className={`navbar ${theme}`}>
             <h1>{title}</h1>
             <button className="btnLightDark" onClick={toggleTheme}>{theme==="light" ? "Dark" : "Light"} </button>
         </nav>

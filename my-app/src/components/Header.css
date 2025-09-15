@@ -11,6 +11,14 @@ nav {
     border-bottom: 1px solid black;
 }
 
+.navbar .light {
+
+}
+
+.navbar.dark {
+    border-bottom: 1px solid white;
+}
+
 .btnLightDark {
     padding: 10px;
     border: none;

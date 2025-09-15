@@ -1,9 +1,18 @@
-.container {
+.container.light {
     max-width: 800px;
     height: fit-content;
     margin: 20px auto;
     padding: 20px;
     border: 1px solid black;
+    border-radius: 5px;
+}
+
+.container.dark {
+    max-width: 800px;
+    height: fit-content;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid white ;
     border-radius: 5px;
 }
 

@@ -5,6 +5,7 @@ export default function Addform(props) {
     const [name,setName] = useState("")
     const [gender,setGender] = useState("Male")
     const {data,setData} = props
+    const {theme,setTheme} = props
 
     function saveData(e) {
         e.preventDefault()
@@ -19,7 +20,7 @@ export default function Addform(props) {
         setGender("Male")
     }
     return (
-        <section className="container">
+        <section className={`container ${theme}`}>
             <form onSubmit={saveData} className='inputForm'>
                 <label>Name of person</label>
                 <input type="text" value={name} onChange={(e)=>setName(e.target.value)} />
