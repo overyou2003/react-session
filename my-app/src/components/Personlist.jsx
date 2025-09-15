@@ -1,15 +1,9 @@
 import { useState } from "react";
-import boy from '../assets/boy.svg'
-import girl from '../assets/girl.svg'
 import "./Personlist.css"
+import User from "./User"; 
 
-export default function Personlist() {
-  const [data, setData] = useState([
-    { id: 1, name: "Dreams", gender: "Male" },
-    { id: 2, name: "Pleng", gender: "Female" },
-    { id: 3, name: "Begle", gender: "Female" },
-    { id: 4, name: "Jiw", gender: "Female" },
-  ]);
+export default function Personlist(props) {
+  const {data} = props
 
   const [show, setShow] = useState(true);
   console.table(data);
@@ -23,15 +17,7 @@ export default function Personlist() {
       <ul>
         {show &&
           data.map((element) => (
-            <li key={element.id}>
-                <div className="left">
-                    <img src={element.gender=="Male" ? boy : girl} width={50} height={50}/>
-                    <p>{element.name}</p>
-                </div>
-              <div className="control">
-                <button>Delete</button>
-              </div>
-            </li>
+            <User key={element.id} element={element}/>
           ))}
       </ul>
     </div>
