@@ -7,18 +7,4 @@
   font-family: "Epunda Slab", serif;
 }
 
-button {
-  background-color: red;
-  padding: 10px 30px;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-  border-radius: 20px;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: rgb(247, 143, 143);
-}
 

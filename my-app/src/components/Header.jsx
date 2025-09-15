@@ -3,7 +3,7 @@ function Header(props) {
     return(
         <nav>
             <h1>{props.title}</h1>
-            <button>Light / Dark</button>
+            <button className="btnLightDark">Light / Dark</button>
         </nav>
     )
 }
