@@ -15,7 +15,20 @@
 
 .btnSave:hover {
     background-color: greenyellow;
-    color: white;
+    color: green;
+}
+
+.btnSave:disabled {
+    cursor: auto;
+    border-color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    background-color: gray;
+}
+
+.btnSave:disabled:hover {
+    border-color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    background-color: gray;
 }
 
 .inputForm {

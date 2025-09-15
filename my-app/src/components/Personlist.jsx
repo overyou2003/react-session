@@ -5,7 +5,7 @@ import User from "./User";
 export default function Personlist({data , deleteUser}) {
 
   const [show, setShow] = useState(true);
-  console.table(data);
+  
 
   return (
     <div className="container">
