@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState , useEffect } from "react"
 import Header from "./components/Header"
 import Personlist from "./components/Personlist"
 import Addform from "./components/Addform"
@@ -12,16 +12,24 @@ function App() {
     // { id: 4, name: "Jiw", gender: "Female" },
   ]);
 
+  const [theme, setTheme] = useState('light')
+
   function deleteUser(id) {
     setData(data.filter((user)=>user.id!==id))
   }
+
+  useEffect(()=> {
+    console.log('render compo')
+  })
   return (
-    <div className="app">
-      <Header title="Dreams"/>
+    <div className={theme}>
+    <div className={'app'}>
+      <Header title="Dreams" theme={theme} setTheme={setTheme}/>
       <main>
         <Addform data={data} setData={setData}/>
         <Personlist data={data} deleteUser={deleteUser}/>
       </main>
+    </div>
     </div>
   
   )

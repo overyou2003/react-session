@@ -1,9 +1,14 @@
 import "./Header.css"
-function Header(props) {
+function Header({title , theme , setTheme}) {
+
+    function toggleTheme() {
+        if(theme==="light") setTheme("dark")
+        else setTheme("light")
+    }
     return(
         <nav>
-            <h1>{props.title}</h1>
-            <button className="btnLightDark">Light / Dark</button>
+            <h1>{title}</h1>
+            <button className="btnLightDark" onClick={toggleTheme}>{theme==="light" ? "Dark" : "Light"} </button>
         </nav>
     )
 }

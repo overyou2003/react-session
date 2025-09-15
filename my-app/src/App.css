@@ -9,3 +9,15 @@ main {
   margin: auto;
   padding: 10px;
 }
+
+.light {
+  background-color: white;
+  color: black;
+  transition: all 0.5s;
+}
+
+.dark {
+  background-color: rgb(58, 57, 57);
+  color: white;
+  transition: all 0.5s;
+}
