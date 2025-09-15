@@ -1,4 +1,7 @@
 import "./Header.css"
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
+
 function Header({title , theme , setTheme}) {
 
     function toggleTheme() {
@@ -8,7 +11,9 @@ function Header({title , theme , setTheme}) {
     return(
         <nav className={`navbar ${theme}`}>
             <h1>{title}</h1>
-            <button className="btnLightDark" onClick={toggleTheme}>{theme==="light" ? "Dark" : "Light"} </button>
+            <span onClick={toggleTheme}>
+                {theme==="light" ? <MdLightMode size={25} className="icon-light"/> : <MdDarkMode size={25} className="icon-dark"/>}
+            </span>
         </nav>
     )
 }
