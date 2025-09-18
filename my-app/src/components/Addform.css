@@ -5,17 +5,18 @@
 .btnSave {
     padding: 5px 20px;
     border-radius: 5px;
-    border-color: greenyellow;
+    outline: none;
+    border: none;
     cursor: pointer;
     color: green;
-    background-color: transparent;
+    background-color: greenyellow;
     font-size: 19px;
     transition: 0.3s;
 }
 
 .btnSave:hover {
-    background-color: greenyellow;
-    color: green;
+    background-color: green;
+    color: white;
 }
 
 .btnSave:disabled {
