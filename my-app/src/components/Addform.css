@@ -9,6 +9,7 @@
     border: none;
     cursor: pointer;
     color: green;
+    font-weight: bold;
     background-color: greenyellow;
     font-size: 19px;
     transition: 0.3s;
